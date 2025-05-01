@@ -23,48 +23,39 @@ To write a Python program using multilevel inheritance to get the name, roll num
 ### PROGRAM
 
 ```
-# Base class to handle student's name and roll number
+#Reg.NO:212222040120
+#Name:PRASANNA R
 class Student:
     def __init__(self, name, roll_no):
         self.name = name
         self.roll_no = roll_no
 
-# Intermediate class to handle marks, inheriting from Student
 class Marks(Student):
     def __init__(self, name, roll_no, marks1, marks2, marks3):
-        super().__init__(name, roll_no)  # Inheriting name and roll_no from Student class
+        super().__init__(name, roll_no)  
         self.marks1 = marks1
         self.marks2 = marks2
         self.marks3 = marks3
 
-# Derived class to calculate total marks, inheriting from Marks
 class TotalMarks(Marks):
     def __init__(self, name, roll_no, marks1, marks2, marks3):
-        super().__init__(name, roll_no, marks1, marks2, marks3)  # Inheriting all from Marks class
+        super().__init__(name, roll_no, marks1, marks2, marks3)  
 
-    # Method to calculate total marks
     def calculate_total(self):
         return self.marks1 + self.marks2 + self.marks3
-
-    # Method to display student details with total marks
     def display_details(self):
         total = self.calculate_total()
         return f"Name:  {self.name} Rollno:  {self.roll_no} Total Marks out of 300:  {total}"
 
 
-# Main block to get user input and display results
 if __name__ == "__main__":
-    # Taking input from user
     name = input()
     roll_no = int(input())
     marks1 = int(input())
     marks2 = int(input())
     marks3 = int(input())
 
-    # Creating an instance of the TotalMarks class
     student = TotalMarks(name, roll_no, marks1, marks2, marks3)
-
-    # Displaying student details with total marks
     print(student.display_details())
 
 
