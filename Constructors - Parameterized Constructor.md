@@ -24,6 +24,8 @@ To write a Python program that defines a class with a parameterized constructor 
 ### PROGRAM
 
 ```
+#Reg.NO:212222040120
+#Name:PRASANNA R
 class Name:
     def __init__(self,name):
         self.name = name
