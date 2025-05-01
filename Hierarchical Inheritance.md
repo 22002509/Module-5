@@ -25,17 +25,17 @@ To write a Python program using hierarchical inheritance where a base class Deta
 
 ### PROGRAM
 ```
-# Base class for general details
+#Reg.NO:212222040120
+#Name:PRASANNA R
 class Details:
     def __init__(self, emp_id, name, gender):
         self.emp_id = emp_id
         self.name = name
         self.gender = gender
 
-# Derived class for Employee details
 class Employee(Details):
     def __init__(self, emp_id, name, gender, company, department):
-        super().__init__(emp_id, name, gender)  # Initialize base class
+        super().__init__(emp_id, name, gender)  
         self.company = company
         self.department = department
 
@@ -47,10 +47,9 @@ class Employee(Details):
                 f"Company:  {self.company}\n"
                 f"Department:  {self.department}")
 
-# Derived class for Doctor details
 class Doctor(Details):
     def __init__(self, emp_id, name, gender, hospital, department):
-        super().__init__(emp_id, name, gender)  # Initialize base class
+        super().__init__(emp_id, name, gender)
         self.hospital = hospital
         self.department = department
 
@@ -62,7 +61,6 @@ class Doctor(Details):
                 f"Hospital:  {self.hospital}\n"
                 f"Department:  {self.department}")
 
-# Main block to get user input and display results
 if __name__ == "__main__":
     # Input for Employee
     emp_id = int(input())
@@ -71,20 +69,16 @@ if __name__ == "__main__":
     emp_company = input()
     emp_department = input()
 
-    # Creating an instance of Employee
     employee = Employee(emp_id, emp_name, emp_gender, emp_company, emp_department)
 
-    # Input for Doctor
     doc_id = int(input())
     doc_name = input()
     doc_gender = input()
     doc_hospital = input()
     doc_department = input()
 
-    # Creating an instance of Doctor
     doctor = Doctor(doc_id, doc_name, doc_gender, doc_hospital, doc_department)
 
-    # Displaying details
     print(employee.display_employee())
     print()
     print(doctor.display_doctor())
