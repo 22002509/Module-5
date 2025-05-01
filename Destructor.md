@@ -25,6 +25,8 @@ To write a Python program that creates a class with a constructor to initialize 
 ### PROGRAM
 
 ```
+#Reg.NO:212222040120
+#Name:PRASANNA R
 class Person:
     def __init__(self,name,age):
         print("Person Created")
